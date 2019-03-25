@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {TodoStorage} from '../../storages/todo.storage';
 import {ToDoItem} from '../../models/todo-item.model';
 
@@ -7,15 +7,12 @@ import {ToDoItem} from '../../models/todo-item.model';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
   @Output()
   editedItem = new EventEmitter<ToDoItem>();
 
   constructor(private todoStorage: TodoStorage) {
-  }
-
-  ngOnInit() {
   }
 
   getItems() {

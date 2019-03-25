@@ -14,8 +14,8 @@ export class TodoLocalStorageDataSource {
 
   async create(item: ToDoItem): Promise<ToDoItem> {
     const list = await this.getAll();
+    // create item id
     item.id = Math.max(...list.map(i => i.id), 0) + 1;
-    console.log(item);
     list.push(item);
     this.saveList(list);
     return Promise.resolve(item);
