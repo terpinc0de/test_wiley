@@ -1,3 +1,7 @@
-<p>
-  todo works!
-</p>
+<div class="todo">
+  <mat-card>
+    <mat-card-title>To Do List</mat-card-title>
+    <app-todo-form [editedItem]="editedItem"></app-todo-form>
+    <app-todo-list (editedItem)="editedItem = $event"></app-todo-list>
+  </mat-card>
+</div>

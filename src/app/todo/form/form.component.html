@@ -1,0 +1,6 @@
+<form [formGroup]="form" (submit)="submit($event)">
+  <mat-form-field>
+    <input matInput [placeholder]="isEdit ? 'Update...' : 'Create...'" formControlName="title" type="text">
+    <button mat-raised-button type="submit" color="primary">{{isEdit ? 'Edit' : 'Add'}}</button>
+  </mat-form-field>
+</form>

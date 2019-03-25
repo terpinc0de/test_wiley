@@ -1,0 +1,22 @@
+<mat-list>
+  <mat-list-item *ngFor="let item of getItems(); trackBy: identify">
+    <div class="item">
+      <mat-checkbox [(ngModel)]="item.isDone" (change)="saveItem(item)">{{item.title}}</mat-checkbox>
+      <div class="controls">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="editItem(item)">
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+          <button mat-menu-item (click)="deleteItem(item)">
+            <mat-icon color="warn">delete</mat-icon>
+            <span>Delete</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>

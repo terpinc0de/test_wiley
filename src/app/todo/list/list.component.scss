@@ -1,0 +1,14 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.mat-list-base .mat-list-item {
+  height: auto;
+}
+
+::ng-deep .mat-checkbox-layout {
+  white-space: normal!important;
+}
